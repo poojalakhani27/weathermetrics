@@ -56,7 +56,6 @@
 			<version>2.5.0</version>
 		</dependency>
 
-
 	</dependencies>
 
 	<build>
@@ -64,6 +63,19 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+						<configuration>
+							<classifier>spring-boot</classifier>
+							<mainClass>
+								com.infinitec.weathermetrics.WeathermetricsApplication
+							</mainClass>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

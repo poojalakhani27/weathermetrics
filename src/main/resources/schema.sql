@@ -1,4 +1,4 @@
-CREATE TABLE weather_metrics (
+CREATE TABLE IF NOT EXISTS weather_metrics (
     id IDENTITY PRIMARY KEY,
     city VARCHAR(50) NOT NULL,
     metric_date BIGINT NOT NULL,
